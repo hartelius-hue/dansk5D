@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10283e">
+<meta name="description" content="Danskværkstedet til 5.D: læsning, stavning, sprog, genrer, gys, faglig læsning og skriftlig og mundtlig dansk. Tre niveauer, hjælper og badges.">
+<title>Danskværkstedet · 5.D</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="data.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Gå til indholdet</a>
+<header class="site-header"><div class="wrap header-inner">
+<button type="button" id="home" class="brand" aria-label="Til forsiden"><span class="brand-mark" aria-hidden="true">D</span><span><strong>Danskværkstedet</strong><small>5.D · Læs, skriv og undersøg</small></span></button>
+<div class="nav-actions">
+<button class="nav-btn optional" id="nav-progress" type="button">🏅 Mine badges</button>
+<button class="nav-btn optional" id="nav-adults" type="button">Til voksne</button>
+<button class="nav-btn primary" id="nav-mette" type="button">✦ Lille Mette</button>
+</div></div></header>
+<main class="main wrap" id="main" tabindex="-1"></main>
+<footer class="footer"><div class="wrap footer-grid"><span><b>Danskværkstedet 5.D</b> · Læs grundigt, tænk selv og prøv igen.</span><span>Originale opgaver udviklet til træning, ikke en standardiseret prøve eller en officiel forlagsportal.</span></div></footer>
+<dialog id="mette-dialog" aria-labelledby="mette-title"><div class="dialog-top"><strong id="mette-title">Lille Mette · din danskhjælper</strong><button type="button" id="close-mette" aria-label="Luk">✕</button></div><div class="dialog-body" id="mette-content"></div></dialog>
+<dialog id="adult-dialog" aria-labelledby="adult-title"><div class="dialog-top"><strong id="adult-title">Til lærere og forældre</strong><button type="button" id="close-adult" aria-label="Luk">✕</button></div><div class="dialog-body">
+<h3>Sådan bruges Danskværkstedet</h3>
+<p>Eleven kan begynde med en kort, vejledende starttest eller vælge et emne. Hvert spil findes i tre niveauer. Efter opgaverne får eleven en faglig opsamling med styrker og næste øveskridt. En forkert besvarelse udløser først et fagligt hint, ikke facit.</p>
+<p>Starttesten består af ét spørgsmål pr. område. Den kan kun pege på foreløbige øveområder og erstatter ikke lærerens læse- eller staveevaluering.</p>
+<p>De mundtlige og skriftlige værksteder bruger elevens selvevaluering. Portalen kan ikke pålideligt vurdere kvaliteten af en fri mundtlig eller skriftlig præstation automatisk. Hvis mikrofonen bruges, optages lyd lokalt i browseren og kan afspilles, men gemmes ikke på en server.</p>
+<p>Fremskridt og badges gemmes kun lokalt på enheden. Der er ingen elevlogin eller navnefelter, og besvarelser fra flere elever på samme Chromebook adskilles ikke. Brug »Nulstil fremskridt« på en delt enhed.</p>
+<p>Faglig ramme: Dansk efter 6. klassetrin med kompetenceområderne læsning, fremstilling, fortolkning og kommunikation. Opgaveområderne er også valgt ud fra undervisningen i 5.D og Mettes ugeplan, bl.a. Stavevejen, Gys og gru, berettermodellen, genrer og ordforråd. Øvelserne er selvstændigt skrevet og gengiver ikke forlagenes materiale.</p>
+<button type="button" id="reset" class="btn" style="background:#fff1eb;color:#953d35;border-color:#e9beb5">Nulstil lokale fremskridt</button>
+</div></dialog>
+<div class="toast" role="status" id="toast" hidden></div>
+</body>
+</html>
