@@ -8,7 +8,7 @@ En selvstændig, browserbaseret træningsportal til dansk i 5.D.
 - Originale opgaver i stavning, nutids-r, dobbeltkonsonanter, sammensatte ord, morfemer, tegnsætning, grammatik, ordforråd, faglig læsning, genrer, gys, kildekritik og mundtlighed
 - Spørgsmålsværksted, Ordhop, Ordslugeren, match med drag-and-drop/klik, vendespil, Wordle-lignende ordjagt, skriveværksted og taletræning
 - Kort vejledende starttest, faglig feedback, næste øveskridt og badges
-- »Lille Mette« – en 3D-avatar skabt med udgangspunkt i Mettes offentlige profilportræt
+- »Mette« – en portrætinspireret 3D-avatar med diskret animation
 - Øvehistorik gemmes alene i browserens localStorage; fritekst og lyd sendes ikke til portalens server
 
 Alt opgaveindhold er selvstændigt skrevet. Materialet er ikke en kopi af Gyldendal, Alinea, Stavevejen eller CampStavning og er ikke en normeret læse- eller staveprøve.
@@ -20,6 +20,13 @@ Dansk efter 6. klassetrin i Fælles Mål (læsning, fremstilling, fortolkning og
 - [Dansk – Fælles Mål og vejledning](https://emu.dk/grundskole/dansk/faghaefte-faelles-maal-laeseplan-og-vejledning/faelles-maal-laeseplan-og)
 - [Gyldendal – danskfagets områder](https://gyldendal-uddannelse.dk/grundskole/fag/dansk)
 - [Alinea – CampStavning](https://campstavning.dev.alineadigital.dk/Login)
+
+## Det nye visuelle design
+
+- Forsidebanner med glade elever i 3D-stil og rigtige klikbare HTML-knapper
+- 12 selvstændige emnebannere og otte motivtyper til spillene
+- »Mette« som en lille animeret GIF nederst til højre på alle sider. Ved reduceret bevægelse vises et stillbillede.
+- Billederne ligger i `assets/` og indlæses lokalt af GitHub Pages.
 
 ## Offentliggørelse på GitHub Pages
 
