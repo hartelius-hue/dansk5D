@@ -305,7 +305,7 @@ window.DANSK_DATA = {
       "Eleverne er grundled; undersøger er udsagnsled."
      ],
      [
-      "Hvilket ord er udsagnsled?",
+      "I sætningen 'Sofie skrev et brev': Hvilket ord er udsagnsled?",
       [
        "skrev",
        "Sofie",
