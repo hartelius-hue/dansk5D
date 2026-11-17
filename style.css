@@ -107,7 +107,6 @@
  transition:transform .18s ease,filter .18s ease;
 }
 .mette-float:hover{transform:translateY(-5px) scale(1.025);filter:drop-shadow(0 14px 19px rgba(9,37,54,.29))}
-.mette-float picture{display:block;width:132px;height:132px}
 .mette-float img{display:block;width:132px;height:132px;object-fit:contain;object-position:center}
 .mette-float-label{
  display:flex;align-items:center;gap:5px;justify-content:center;white-space:nowrap;
@@ -156,7 +155,7 @@
  .mode-hero{height:168px}
  .playing-banner{height:96px}
  .mette-float{width:103px;min-height:116px;right:7px;bottom:12px}
- .mette-float picture,.mette-float img{width:98px;height:98px}
+ .mette-float img{width:98px;height:98px}
  .mette-float-label{font-size:10px;padding:7px 9px;margin-top:-8px}
  .intro-guidance{margin:16px 0;padding:12px 15px}
  .intro-guidance p{font-size:12px}
@@ -175,4 +174,20 @@
   .progress-strip .stat small{font-size:11px}
   .progress-strip .bar{grid-column:1/-1;width:100%}
   .progress-strip .btn{grid-column:1/-1;margin-left:0!important;justify-self:stretch}
+}
+
+/* Mette – originalt portrætfoto fra Læseblik, ikke genereret avatar. */
+.mette-float .mette-float-photo{
+ width:132px;height:132px;display:block;
+ object-fit:contain;object-position:center bottom;
+ padding:0;background:radial-gradient(circle at 48% 35%,#ffffff 0%,#eaf4f7 76%,#dbeef0 100%);
+ border:2px solid rgba(255,255,255,.96);border-radius:22px;
+ box-shadow:0 8px 22px rgba(11,40,60,.23);
+}
+.helper-photo{
+ object-fit:cover;object-position:center 16%;
+ background:linear-gradient(145deg,#f2f8f9,#e6eef4);
+}
+@media(max-width:650px){
+ .mette-float .mette-float-photo{width:98px;height:98px;border-radius:17px}
 }
