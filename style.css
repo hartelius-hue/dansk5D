@@ -191,3 +191,52 @@
 @media(max-width:650px){
  .mette-float .mette-float-photo{width:98px;height:98px;border-radius:17px}
 }
+
+/* Mette-avatar: rolig 3D-sticker med blinken, smil og vink.
+   Originalportrættet vises i hjælpedialogen og ved reduceret bevægelse. */
+.mette-float{isolation:isolate;overflow:visible}
+.mette-float::before{
+ content:"";position:absolute;z-index:-1;left:8px;top:9px;
+ width:130px;height:130px;border-radius:50%;
+ background:radial-gradient(circle at 42% 37%,#fffbea 0%,#e4f3ef 50%,#91c7c2 90%);
+ border:3px solid rgba(255,255,255,.95);
+ box-shadow:inset -8px -8px 16px rgba(37,107,118,.12),0 9px 0 rgba(46,110,132,.14),0 18px 23px rgba(5,50,69,.16);
+}
+.mette-avatar-picture{
+ position:relative;z-index:1;display:block;width:132px;height:132px;
+ transform-origin:50% 90%;animation:mette-avatar-hover 5.6s ease-in-out infinite;
+}
+.mette-float .mette-avatar-picture .mette-float-photo{
+ display:block;width:132px;height:132px;
+ padding:0;border:0;border-radius:0;
+ box-shadow:none;background:transparent;
+ object-fit:contain;object-position:center bottom;
+ filter:saturate(1.04) contrast(1.025) drop-shadow(0 7px 4px rgba(16,62,85,.21));
+}
+.mette-float::after{
+ content:"✦";pointer-events:none;z-index:2;position:absolute;
+ top:6px;right:7px;color:#f7c96b;font-size:24px;
+ text-shadow:0 2px 2px #754d1c55;
+ animation:mette-sparkle 5.6s ease-in-out infinite;
+}
+.mette-float:hover .mette-avatar-picture{animation-duration:2.8s}
+.mette-float-label{z-index:3}
+@keyframes mette-avatar-hover{
+ 0%,100%{transform:translateY(0) rotate(-1deg)}
+ 42%{transform:translateY(-4px) rotate(1deg)}
+ 66%{transform:translateY(-2px) rotate(0)}
+}
+@keyframes mette-sparkle{
+ 0%,32%,75%,100%{opacity:.45;transform:scale(.75) rotate(-9deg)}
+ 50%{opacity:1;transform:scale(1.12) rotate(13deg)}
+}
+@media(max-width:650px){
+ .mette-float::before{width:98px;height:98px;left:3px;top:7px}
+ .mette-avatar-picture{width:98px;height:98px}
+ .mette-float .mette-avatar-picture .mette-float-photo{width:98px;height:98px}
+ .mette-float::after{font-size:19px;top:3px;right:4px}
+}
+@media(prefers-reduced-motion:reduce){
+ .mette-avatar-picture,.mette-float::after{animation:none!important}
+ .mette-float .mette-avatar-picture .mette-float-photo{filter:drop-shadow(0 4px 4px rgba(16,62,85,.14))}
+}
