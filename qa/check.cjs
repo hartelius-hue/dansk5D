@@ -22,6 +22,7 @@ for(const t of D.topics){
  }
  for(const [li,qs] of t.levels.entries()){
   assert.ok(qs.length>=3,`${t.id} niveau ${li}: mindst 3 opgaver`);
+  assert.equal(new Set(qs.map(q=>q[0])).size,qs.length,`${t.id}: entydige spørgsmål på niveau ${li}`);
   numQ+=qs.length;
   for(const q of qs){
    assert.equal(q.length,5,`${t.id}: spørgsmål med hint og forklaring`);
