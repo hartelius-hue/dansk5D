@@ -48,6 +48,17 @@ window.DANSK_DATA = {
       0,
       "Ordet har både e og dobbelt s.",
       "Interessant staves med e efter t og dobbelt s."
+     ],
+     [
+      "Hvilket ord har et stumt d?",
+      [
+       "hund",
+       "hun",
+       "hue"
+      ],
+      0,
+      "Tænk på et bogstav, der ikke høres tydeligt.",
+      "I hund findes et d, som normalt ikke udtales som en tydelig d-lyd."
      ]
     ],
     [
@@ -83,6 +94,17 @@ window.DANSK_DATA = {
       0,
       "Ordets første del hænger sammen med nød.",
       "Nødvendig staves med d i nød og e i -vendig."
+     ],
+     [
+      "Vælg den rigtige sætning.",
+      [
+       "Jeg lægger bogen på bordet.",
+       "Jeg ligger bogen på bordet.",
+       "Jeg lægge bogen på bordet."
+      ],
+      0,
+      "Lægge handler om at placere noget; ligge handler om placering.",
+      "Når du placerer bogen, bruger du lægger."
      ]
     ],
     [
@@ -118,6 +140,17 @@ window.DANSK_DATA = {
       0,
       "Ordet beskriver noget, der ikke er afhængigt.",
       "Uafhængig er den korrekte tillægsform."
+     ],
+     [
+      "Hvilket ord er stavet korrekt?",
+      [
+       "selvstændighed",
+       "selvstendighed",
+       "selvstænighed"
+      ],
+      0,
+      "Tænk på ordet selvstændig og endelsen -hed.",
+      "Selvstændighed er dannet af selvstændig og -hed."
      ]
     ]
    ]
@@ -169,6 +202,17 @@ window.DANSK_DATA = {
       0,
       "Replikken skal være markeret og adskilt fra ledsætningen.",
       "Anførselstegn og komma tydeliggør direkte tale."
+     ],
+     [
+      "Hvilken sætning bruger et passende udråbstegn?",
+      [
+       "Pas på!",
+       "Pas på?",
+       "Pas på,"
+      ],
+      0,
+      "Et udråb skal have et tydeligt sluttegn.",
+      "Udråbstegnet understreger advarslen eller udråbet."
      ]
     ],
     [
@@ -204,6 +248,17 @@ window.DANSK_DATA = {
       0,
       "Anførselstegnene skal kun omslutte det, der bliver sagt.",
       "Kun selve replikken står i anførselstegn."
+     ],
+     [
+      "Hvilken sætning har korrekt tegnsætning?",
+      [
+       "Jeg ville ud, men det regnede.",
+       "Jeg ville ud men, det regnede.",
+       "Jeg ville ud men det, regnede."
+      ],
+      0,
+      "Men forbinder to helsætninger i eksemplet.",
+      "Der sættes komma før men, når to helsætninger forbindes."
      ]
     ],
     [
@@ -239,6 +294,17 @@ window.DANSK_DATA = {
       0,
       "Den første replik er et spørgsmål, den anden et svar.",
       "Spørgsmålstegnet hører til den første replik, og den anden markeres som direkte tale."
+     ],
+     [
+      "Hvilken opremsning med kolon er skrevet tydeligst?",
+      [
+       "Vi skal bruge tre ting: papir, saks og lim.",
+       "Vi skal bruge tre ting, papir: saks og lim.",
+       "Vi skal bruge tre ting; papir: saks og lim."
+      ],
+      0,
+      "Kolon kan indlede en opremsning efter en fuld sætning.",
+      "Kolon efter 'tre ting' viser, at opremsningen følger."
      ]
     ]
    ]
@@ -290,6 +356,17 @@ window.DANSK_DATA = {
       0,
       "Du kan ofte sætte en eller et foran.",
       "En fortælling er et navneord."
+     ],
+     [
+      "I sætningen 'Hun løb hurtigt' er 'hurtigt' et ...",
+      [
+       "biord",
+       "navneord",
+       "stedord"
+      ],
+      0,
+      "Ordet fortæller, hvordan hun løb.",
+      "Hurtigt er her et biord, fordi det beskriver måden, hun løb på."
      ]
     ],
     [
@@ -325,6 +402,17 @@ window.DANSK_DATA = {
       0,
       "Stedord kan stå i stedet for navne.",
       "Hun er et personligt stedord."
+     ],
+     [
+      "I sætningen 'Noor sparkede bolden' er 'bolden' ...",
+      [
+       "genstandsled",
+       "grundled",
+       "udsagnsled"
+      ],
+      0,
+      "Hvad er det, der bliver sparket?",
+      "Bolden er genstandsled, da handlingen retter sig mod bolden."
      ]
     ],
     [
@@ -360,6 +448,17 @@ window.DANSK_DATA = {
       0,
       "Ordet beskriver broen.",
       "Gamle er et tillægsord, der lægger en egenskab til bro."
+     ],
+     [
+      "Hvilken sætning står i førnutid?",
+      [
+       "Hun har undersøgt sagen.",
+       "Hun undersøger sagen.",
+       "Hun undersøgte sagen."
+      ],
+      0,
+      "Førnutid dannes med har eller er og kort tillægsform.",
+      "Har undersøgt er førnutid, mens undersøger er nutid og undersøgte er datid."
      ]
     ]
    ]
@@ -410,6 +509,17 @@ window.DANSK_DATA = {
       0,
       "Sammenlign ordene med handlingen.",
       "Handling og replik peger i forskellige retninger."
+     ],
+     [
+      "Sofie sagde, hun ikke var ked af det, men tørrede hurtigt øjnene. Hvad kan læseren udlede?",
+      [
+       "Hun kan være ked af det, selv om hun siger noget andet.",
+       "Hun har helt sikkert fået støv i øjnene.",
+       "Hun vil gerne spille fodbold."
+      ],
+      0,
+      "Sammenlign det, hun siger, med det, hun gør.",
+      "At tørre øjnene kan være et spor på sorg eller tristhed, men teksten gør det ikke sikkert."
      ]
     ],
     [
@@ -445,6 +555,17 @@ window.DANSK_DATA = {
       0,
       "Sammenlign før og nu.",
       "Kontrasten mellem lyd og stilhed viser et stemningsskift."
+     ],
+     [
+      "Koppen var stadig varm, og stolen stod trukket ud. Hvad er en rimelig slutning?",
+      [
+       "Nogen kan have været der for nylig.",
+       "Rummet har altid været tomt.",
+       "Koppen er lavet af plastik."
+      ],
+      0,
+      "Hvad kan varm kaffe og en trukket stol antyde?",
+      "De to spor gør det sandsynligt, at nogen netop har brugt pladsen."
      ]
     ],
     [
@@ -480,6 +601,17 @@ window.DANSK_DATA = {
       0,
       "Kig både på replik og kropssprog.",
       "Replikken og den vækvente bevægelse åbner for en undertone af overraskelse eller skuffelse."
+     ],
+     [
+      "'Det gør ikke noget,' sagde han, men hans stemme knækkede. Hvad viser tekstens modsætning?",
+      [
+       "Følelserne kan være stærkere end ordene.",
+       "Han er helt sikkert forkølet.",
+       "Han har allerede glemt hændelsen."
+      ],
+      0,
+      "Undersøg forskellen på replikken og stemmens udtryk.",
+      "Modstrid mellem ord og stemme kan pege på en skjult følelse."
      ]
     ]
    ]
@@ -531,6 +663,17 @@ window.DANSK_DATA = {
       0,
       "Find et ord for at være meget engageret.",
       "Ivrig betyder her begejstret og meget opsat på noget."
+     ],
+     [
+      "Hvad betyder 'pioner'?",
+      [
+       "En af de første til at udforske eller udvikle noget",
+       "En person, der altid kommer sidst",
+       "En gammel mønt"
+      ],
+      0,
+      "Tænk på mennesker, der går forrest.",
+      "En pioner er blandt de første inden for et område eller en udvikling."
      ]
     ],
     [
@@ -566,6 +709,17 @@ window.DANSK_DATA = {
       0,
       "Se efter årsag og virkning.",
       "En konsekvens er noget, der følger af en handling eller begivenhed."
+     ],
+     [
+      "Hvad betyder 'emigration'?",
+      [
+       "At udvandre fra et land",
+       "At vende tilbage efter en skoledag",
+       "At blive født i et land"
+      ],
+      0,
+      "Forstavelsen e- peger her på at flytte ud.",
+      "Emigration betyder udvandring fra et land."
      ]
     ],
     [
@@ -601,6 +755,17 @@ window.DANSK_DATA = {
       0,
       "Noget komplekst har ofte flere forhold, der spiller sammen.",
       "Kompleks betyder sammensat og ofte vanskelig at overskue."
+     ],
+     [
+      "Hvad betyder 'kolonialisme' i historisk sammenhæng?",
+      [
+       "Når en stat udøver magt og kontrol over andre områder og befolkninger",
+       "Når alle lande har præcis samme styre",
+       "Når man bygger en ny skole"
+      ],
+      0,
+      "Tænk på magtforhold mellem stater og områder.",
+      "Kolonialisme handler om politisk og ofte økonomisk kontrol over områder og befolkninger."
      ]
     ]
    ]
@@ -651,6 +816,17 @@ window.DANSK_DATA = {
       0,
       "Et godt spørgsmål peger på tekstens centrale proces.",
       "Spørgsmålet om hvordan vand renses, leder læseren til relevant faglig viden."
+     ],
+     [
+      "Tekst: 'En oversigt viser, at tre fuglearter lever ved kysten hele året.' Hvad gør ordet 'fuglearter'?",
+      [
+       "Det samler forskellige slags fugle i en faglig kategori.",
+       "Det betyder præcis én fugl.",
+       "Det beskriver fuglenes farver."
+      ],
+      0,
+      "Fagord gør oplysninger mere præcise.",
+      "Fuglearter er et fagord, der betegner forskellige arter af fugle."
      ]
     ],
     [
@@ -686,6 +862,17 @@ window.DANSK_DATA = {
       0,
       "Fagord er nøgler til forståelse.",
       "Kontekst, orddannelse og opslag kan afklare betydningen."
+     ],
+     [
+      "Tekst: 'I middelalderen kunne en by have en mur, som gjorde det sværere for fjender at trænge ind.' Hvad er murens funktion?",
+      [
+       "At beskytte byen mod angreb",
+       "At gøre byen usynlig",
+       "At forhindre al handel"
+      ],
+      0,
+      "Find årsagen i teksten.",
+      "Muren fungerede som en del af byens forsvar."
      ]
     ],
     [
@@ -721,6 +908,17 @@ window.DANSK_DATA = {
       0,
       "Tænk på struktur og begreber.",
       "Overskrifter giver overblik, mens nøgleord hjælper med at fastholde fagligt indhold."
+     ],
+     [
+      "Tekst: 'Når næringsstoffer fra marker skylles ud i vandet, kan algevæksten øges. Når algerne nedbrydes, bruges ilt.' Hvad forklarer teksten?",
+      [
+       "En mulig sammenhæng mellem udvaskning og iltmangel",
+       "At alger altid skaber mere ilt under nedbrydning",
+       "At alle marker ligger under vand"
+      ],
+      0,
+      "Følg årsagskæden fra marker til vand.",
+      "Udledning af næringsstoffer kan øge algevækst, hvis nedbrydning bruger ilt."
      ]
     ]
    ]
@@ -772,6 +970,17 @@ window.DANSK_DATA = {
       0,
       "En novelle er typisk forholdsvis kort.",
       "Novellen har ofte få personer og en koncentreret handling."
+     ],
+     [
+      "Hvad kendetegner en historisk roman?",
+      [
+       "En opdigtet fortælling, der foregår i en historisk tid",
+       "En liste over historiske årstal uden personer",
+       "En teknisk brugsanvisning"
+      ],
+      0,
+      "Tænk på fortælling og fortid i samme genre.",
+      "Historiske romaner kombinerer skønlitterær fortælling med en historisk ramme."
      ]
     ],
     [
@@ -807,6 +1016,17 @@ window.DANSK_DATA = {
       0,
       "Hvilken stemning forsøger genren at skabe?",
       "Gysere skaber ofte uro gennem miljø, forventning og usikkerhed."
+     ],
+     [
+      "Hvad er et typisk træk ved fantasy?",
+      [
+       "En forestillet verden med magi eller overnaturlige elementer",
+       "Et krav om kun dokumenterede fakta",
+       "At teksten altid er en avisartikel"
+      ],
+      0,
+      "Se på verdenens regler.",
+      "Fantasy kan bruge magi, særlige verdener og overnaturlige kræfter."
      ]
     ],
     [
@@ -842,6 +1062,17 @@ window.DANSK_DATA = {
       0,
       "Tema er ikke det samme som handlingsreferat.",
       "Temaet er den centrale problemstilling eller idé, som fortællingen undersøger."
+     ],
+     [
+      "Hvad skal du især undersøge, når du sammenligner to genrer?",
+      [
+       "Deres formål, opbygning og sproglige kendetegn",
+       "Kun deres sidetal",
+       "Kun forsiderne"
+      ],
+      0,
+      "Genrer adskilles af mere end længde.",
+      "Teksternes formål og typiske træk hjælper med at identificere forskelle."
      ]
     ]
    ]
@@ -893,6 +1124,17 @@ window.DANSK_DATA = {
       0,
       "Vælg det, der får læseren til at undre sig.",
       "En lyd uden forklaring kan skabe suspense."
+     ],
+     [
+      "Hvilken åbning kan være et stærkt anslag i en gyser?",
+      [
+       "Det ringede på døren, selv om huset havde stået tomt i årevis.",
+       "Der var engang en almindelig tirsdag.",
+       "Mange mennesker kan lide bøger."
+      ],
+      0,
+      "Et anslag kan skabe et ubesvaret spørgsmål.",
+      "Den uforklarlige ringning vækker læserens nysgerrighed."
      ]
     ],
     [
@@ -928,6 +1170,17 @@ window.DANSK_DATA = {
       0,
       "Helten må nu handle videre.",
       "Efter point of no return kan personen ikke uden videre vende tilbage til udgangspunktet."
+     ],
+     [
+      "Hvad er konfliktoptrapning?",
+      [
+       "At problemerne vokser, og spændingen stiger",
+       "At alle konflikter forsvinder straks",
+       "At forfatteren forklarer sin kildeliste"
+      ],
+      0,
+      "Tænk på, hvad der sker før klimaks.",
+      "Konfliktoptrapning øger presset på personerne frem mod det afgørende punkt."
      ]
     ],
     [
@@ -963,6 +1216,17 @@ window.DANSK_DATA = {
       0,
       "Tænk på læserytme.",
       "Korte sætninger kan skabe en hurtig, staccatoagtig rytme."
+     ],
+     [
+      "Hvad er udtoning i berettermodellen?",
+      [
+       "Den sidste del, som afrunder fortællingen",
+       "Det første spor på en konflikt",
+       "Det øjeblik, hvor fortællingen begynder"
+      ],
+      0,
+      "Hvor er vi i fortællingens forløb?",
+      "Udtoningen afrunder handlingen og giver læseren en afsluttende fornemmelse."
      ]
     ]
    ]
@@ -1013,6 +1277,17 @@ window.DANSK_DATA = {
       0,
       "Hvert afsnit kan have en hovedtanke.",
       "Afsnit gør det lettere at følge udviklingen i teksten."
+     ],
+     [
+      "Hvordan kan du undgå at gentage det samme ord i hver sætning?",
+      [
+       "Bruge passende synonymer og stedord",
+       "Fjerne alle udsagnsord",
+       "Sætte kolon efter hvert ord"
+      ],
+      0,
+      "Tænk på varieret ordvalg uden at miste præcision.",
+      "Synonymer og stedord kan skabe variation og sammenhæng i teksten."
      ]
     ],
     [
@@ -1048,6 +1323,17 @@ window.DANSK_DATA = {
       0,
       "Revidering handler om mere end stavning.",
       "En god revision ser også på målgruppe, struktur og ordvalg."
+     ],
+     [
+      "Hvad bør du overveje, før du skriver et argumenterende portræt af en person?",
+      [
+       "Hvem der skal læse teksten, og hvad du vil overbevise dem om",
+       "Kun hvilken font der ser størst ud",
+       "Om alle sætninger kan være spørgsmål"
+      ],
+      0,
+      "En tekst har et formål og en modtager.",
+      "Målgruppe og formål hjælper dig med at vælge argumenter og eksempler."
      ]
     ],
     [
@@ -1083,6 +1369,17 @@ window.DANSK_DATA = {
       0,
       "Prøv at se teksten med læserens øjne.",
       "Højtlæsning kan afsløre uklare formuleringer og brud på sammenhængen."
+     ],
+     [
+      "Hvordan skaber du en konsekvent tredjepersonsfortæller?",
+      [
+       "Fortæl om personer som han, hun eller de og hold synsvinklen tydelig",
+       "Skift tilfældigt mellem jeg og hun",
+       "Lad alle personer fortælle på én gang"
+      ],
+      0,
+      "Fortællerens position skal være til at følge.",
+      "En tredjepersonsfortæller bruger typisk han, hun eller de, og en stabil synsvinkel hjælper læseren."
      ]
     ]
    ]
@@ -1133,6 +1430,17 @@ window.DANSK_DATA = {
       0,
       "Tænk på afsenderens formål.",
       "Reklamer er typisk lavet for at påvirke holdninger eller køb."
+     ],
+     [
+      "Hvorfor skal du skrive, hvor dine oplysninger kommer fra?",
+      [
+       "Så andre kan undersøge kilden",
+       "For at gøre teksten længere",
+       "For at undgå at forklare noget"
+      ],
+      0,
+      "Gør det muligt at efterprøve viden.",
+      "Kildeangivelse viser, hvor oplysninger stammer fra."
      ]
     ],
     [
@@ -1168,6 +1476,17 @@ window.DANSK_DATA = {
       0,
       "Kan udsagnet afhænge af personens mening?",
       "En vurdering som 'jeg synes' er en personlig holdning."
+     ],
+     [
+      "Hvilket udsagn er en efterprøvbar oplysning frem for en vurdering?",
+      [
+       "Bogen blev udgivet i 2020.",
+       "Bogen er verdens bedste.",
+       "Bogen er alt for kedelig."
+      ],
+      0,
+      "Kan udsagnet kontrolleres?",
+      "Et udgivelsesår kan efterprøves, mens de andre udsagn er vurderinger."
      ]
     ],
     [
@@ -1203,6 +1522,17 @@ window.DANSK_DATA = {
       0,
       "Læseren skal kunne se, hvad du har lånt.",
       "Citat og kildeangivelse synliggør, hvor formuleringen kommer fra."
+     ],
+     [
+      "Hvad bør du gøre med et billede uden tydelig kilde eller dato, der påstår at vise en ny begivenhed?",
+      [
+       "Undersøge billedets oprindelse og sammenligne med troværdige kilder",
+       "Dele det straks",
+       "Tro på det, fordi det ser dramatisk ud"
+      ],
+      0,
+      "Billeder kan være gamle eller taget ud af sammenhæng.",
+      "Oprindelse, dato og sammenligning hjælper med at vurdere billedets troværdighed."
      ]
     ]
    ]
@@ -1254,6 +1584,17 @@ window.DANSK_DATA = {
       0,
       "Se på det, der står efter ordets grundform.",
       "-ene markerer bestemt flertal."
+     ],
+     [
+      "Hvilket ord er et sammensat navneord?",
+      [
+       "solskin",
+       "sol og skin",
+       "skinner"
+      ],
+      0,
+      "To orddele kan blive til ét navneord.",
+      "Solskin er sammensat af sol og skin."
      ]
     ],
     [
@@ -1289,6 +1630,17 @@ window.DANSK_DATA = {
       0,
       "Hvilken del betyder igen?",
       "Gen- i genlæse angiver, at noget gøres igen."
+     ],
+     [
+      "Hvad betyder 'mis-' i ordet 'misforstå'?",
+      [
+       "At noget forstås forkert",
+       "At noget gentages",
+       "At noget er meget stort"
+      ],
+      0,
+      "Sammenlign forstå og misforstå.",
+      "Forstavelsen mis- viser, at forståelsen er forkert."
      ]
     ],
     [
@@ -1324,6 +1676,17 @@ window.DANSK_DATA = {
       0,
       "Sammenlign begribelig og ubegribelig.",
       "Forstavelsen u- vender betydningen: ikke begribelig."
+     ],
+     [
+      "Hvordan er 'genanvendelig' dannet?",
+      [
+       "gen- + anvend + -elig",
+       "g + enan + vendelig",
+       "genanvend + e + lighed"
+      ],
+      0,
+      "Find betydningen 'bruge igen'.",
+      "Gen- og anvend fortæller om at bruge noget igen, og -elig danner tillægsord."
      ]
     ]
    ]
@@ -1374,6 +1737,17 @@ window.DANSK_DATA = {
       0,
       "Tænk på højtlæsningens rytme.",
       "Pauser understøtter sætningernes betydning."
+     ],
+     [
+      "Hvad gør højtlæsning lettere at forstå for andre?",
+      [
+       "Tydelig stemme og passende pauser",
+       "At skynde sig mest muligt",
+       "At kigge væk fra teksten hele tiden"
+      ],
+      0,
+      "Tænk på lytterens forståelse.",
+      "Tydelig artikulation og pauser hjælper lytteren med at følge teksten."
      ]
     ],
     [
@@ -1409,6 +1783,17 @@ window.DANSK_DATA = {
       0,
       "Gør stoffet forståeligt.",
       "Fagord bør sættes ind i en sammenhæng."
+     ],
+     [
+      "Hvad bør en god podcastindledning gøre?",
+      [
+       "Fortælle lytteren emne og formål",
+       "Afsløre alle svar uden forklaring",
+       "Begynde med et helt andet emne"
+      ],
+      0,
+      "Lytteren skal vide, hvad udsendelsen handler om.",
+      "En kort indledning skaber overblik og forventning."
      ]
     ],
     [
@@ -1444,6 +1829,17 @@ window.DANSK_DATA = {
       0,
       "Tænk på modtagerens forudsætninger.",
       "Målgruppetilpasning gør formidlingen mere forståelig."
+     ],
+     [
+      "Hvordan kan du støtte din holdning i en diskussion?",
+      [
+       "Give relevante eksempler og forklaringer",
+       "Gentage påstanden højere",
+       "Tale uden at lytte"
+      ],
+      0,
+      "En påstand bliver stærkere med belæg.",
+      "Konkrete begrundelser gør det lettere for andre at forstå og vurdere dit synspunkt."
      ]
     ]
    ]
@@ -1753,5 +2149,5 @@ window.DANSK_DATA = {
   "Øv videre",
   "Udfordring"
  ],
- "version": "2026-11-17"
+ "version": "2026-11-17-revideret"
 };
