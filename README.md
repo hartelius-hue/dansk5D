@@ -8,7 +8,7 @@ En selvstændig, browserbaseret træningsportal til dansk i 5.D.
 - Originale opgaver i stavning, nutids-r, dobbeltkonsonanter, sammensatte ord, morfemer, tegnsætning, grammatik, ordforråd, faglig læsning, genrer, gys, kildekritik og mundtlighed
 - Spørgsmålsværksted, Ordhop, Ordslugeren, match med drag-and-drop/klik, vendespil, Wordle-lignende ordjagt, skriveværksted og taletræning
 - Kort vejledende starttest, faglig feedback, næste øveskridt og badges
-- »Mette« – en diskret animeret, portrætinspireret avatar med blink, smil og vink nederst til højre, baseret på hendes originale Læseblik-portræt
+- »Mette« – en diskret animeret GIF med hendes nøjagtige originale Læseblik-portræt (ansigt og hår ændres ikke)
 - Øvehistorik gemmes alene i browserens localStorage; fritekst og lyd sendes ikke til portalens server
 
 Alt opgaveindhold er selvstændigt skrevet. Materialet er ikke en kopi af Gyldendal, Alinea, Stavevejen eller CampStavning og er ikke en normeret læse- eller staveprøve.
@@ -25,7 +25,7 @@ Dansk efter 6. klassetrin i Fælles Mål (læsning, fremstilling, fortolkning og
 
 - Forsidebanner med glade elever i 3D-stil og rigtige klikbare HTML-knapper
 - 12 selvstændige emnebannere og otte motivtyper til spillene
-- »Mette« er en klikbar animeret WebP-avatar nederst til højre. Det originale portrætfoto vises i hjælpedialogen og som alternativ, hvis enheden er sat til reduceret bevægelse.
+- »Mette« er en klikbar GIF nederst til højre, bygget af hendes originale portrætfoto med diskret bevægelse. Det originale stillbillede vises i hjælpedialogen og ved reduceret bevægelse.
 - Billederne ligger i `assets/` og indlæses lokalt af GitHub Pages.
 
 ## Offentliggørelse på GitHub Pages
