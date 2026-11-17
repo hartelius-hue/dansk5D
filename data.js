@@ -96,7 +96,7 @@ window.DANSK_DATA = {
       "Nødvendig staves med d i nød og e i -vendig."
      ],
      [
-      "Vælg den rigtige sætning.",
+      "Hvilken sætning bruger ligge og lægge korrekt?",
       [
        "Jeg lægger bogen på bordet.",
        "Jeg ligger bogen på bordet.",
