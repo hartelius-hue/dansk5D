@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#10283e">
-<meta name="description" content="Danskværkstedet til 5.D: læsning, stavning, sprog, genrer, gys, faglig læsning og skriftlig og mundtlig dansk. Tre niveauer, hjælper og badges.">
+<meta name="description" content="Danskværkstedet til 5.D: Træn læsning, stavning, tegnsætning, grammatik, genrer, skrivning og mundtlig dansk på tre niveauer med Mette som danskhjælper og badges.">
 <title>Danskværkstedet · 5.D</title>
 <link rel="stylesheet" href="style.css">
 <script defer src="data.js"></script>
@@ -21,19 +21,21 @@
 </div></div></header>
 <main class="main wrap" id="main" tabindex="-1"></main>
 <button class="mette-float" id="mette-float" type="button" aria-label="Spørg Mette om et råd" title="Mette · din danskhjælper">
-<img class="mette-float-photo" src="assets/mette-portraet.webp" alt="" width="132" height="132" decoding="async">
+<img class="mette-float-photo" src="assets/mette-portraet.webp" alt="Portræt af Mette, din danskhjælper" width="132" height="132" decoding="async">
 <span class="mette-float-label">Spørg Mette <span aria-hidden="true">✦</span></span>
 </button>
-<footer class="footer"><div class="wrap footer-grid"><span><b>Danskværkstedet 5.D</b> · Læs grundigt, tænk selv og prøv igen.</span><span>Originale opgaver udviklet til træning, ikke en standardiseret prøve eller en officiel forlagsportal.</span></div></footer>
+<footer class="footer"><div class="wrap footer-grid"><span><b>Danskværkstedet 5.D</b> · Læs grundigt, tænk selv og prøv igen.</span>
+<span>Originale opgaver udviklet til træning, ikke en standardiseret prøve eller en officiel forlagsportal.</span></div></footer>
 <dialog id="mette-dialog" aria-labelledby="mette-title"><div class="dialog-top"><strong id="mette-title">Mette · din danskhjælper</strong><button type="button" id="close-mette" aria-label="Luk">✕</button></div><div class="dialog-body" id="mette-content"></div></dialog>
-<dialog id="adult-dialog" aria-labelledby="adult-title"><div class="dialog-top"><strong id="adult-title">Til lærere og forældre</strong><button type="button" id="close-adult" aria-label="Luk">✕</button></div><div class="dialog-body">
-<h3>Sådan bruges Danskværkstedet</h3>
+<dialog id="adult-dialog" aria-labelledby="adult-title"><div class="dialog-top"><strong id="adult-title">Til voksne</strong><button type="button" id="close-adult" aria-label="Luk">✕</button></div><div class="dialog-body">
+<h3>Information til lærere og forældre</h3>
+<p>Sådan bruges Danskværkstedet:</p>
 <p>Eleven kan begynde med en kort, vejledende starttest eller vælge et emne. Hvert spil findes i tre niveauer. Efter opgaverne får eleven en faglig opsamling med styrker og næste øveskridt. En forkert besvarelse udløser først et fagligt hint, ikke facit.</p>
 <p>Starttesten består af ét spørgsmål pr. område. Den kan kun pege på foreløbige øveområder og erstatter ikke lærerens læse- eller staveevaluering.</p>
 <p>De mundtlige og skriftlige værksteder bruger elevens selvevaluering. Portalen kan ikke pålideligt vurdere kvaliteten af en fri mundtlig eller skriftlig præstation automatisk. Hvis mikrofonen bruges, optages lyd lokalt i browseren og kan afspilles, men gemmes ikke på en server.</p>
 <p>Fremskridt og badges gemmes kun lokalt på enheden. Der er ingen elevlogin eller navnefelter, og besvarelser fra flere elever på samme Chromebook adskilles ikke. Brug »Nulstil fremskridt« på en delt enhed.</p>
 <p>Faglig ramme: Dansk efter 6. klassetrin med kompetenceområderne læsning, fremstilling, fortolkning og kommunikation. Opgaveområderne er også valgt ud fra undervisningen i 5.D og Mettes ugeplan, bl.a. Stavevejen, Gys og gru, berettermodellen, genrer og ordforråd. Øvelserne er selvstændigt skrevet og gengiver ikke forlagenes materiale.</p>
-<button type="button" id="reset" class="btn" style="background:#fff1eb;color:#953d35;border-color:#e9beb5">Nulstil lokale fremskridt</button>
+<button type="button" id="reset" class="btn" style="background:#fff1eb;color:#953d35;border-color:#e9beb5">Nulstil fremskridt</button>
 </div></dialog>
 <div class="toast" role="status" id="toast" hidden></div>
 </body>
