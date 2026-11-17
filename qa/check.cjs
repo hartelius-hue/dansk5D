@@ -5,8 +5,15 @@ const dataSource=fs.readFileSync("data.js","utf8"),app=fs.readFileSync("app.js",
 const ctx={window:{}};vm.runInNewContext(dataSource,ctx);const D=ctx.window.DANSK_DATA;
 assert.ok(D,"Opgavedata indlæses");
 assert.equal(D.topics.length,12,"12 danskfaglige emner");
-assert.ok(fs.existsSync("assets/mette-avatar.webp"),"Lille Mette-avatar skal være lokalt tilgængelig");
+assert.ok(fs.existsSync("assets/mette-still.webp"),"Mette-avatar skal være lokalt tilgængelig");
+assert.ok(fs.existsSync("assets/mette-animeret.gif"),"Mette-animation skal være lokalt tilgængelig");
+assert.equal(fs.readFileSync("assets/mette-animeret.gif").subarray(0,6).toString("ascii"),"GIF89a","Mette-animation skal være en rigtig GIF");
+assert.ok(fs.existsSync("assets/hero-5d.webp"),"3D-forsidebanner skal være lokalt tilgængeligt");
 const modes=new Set(["quiz","platform","maze","match","memory","wordle","write","speak"]);
+for(const t of D.topics)assert.ok(fs.existsSync("assets/topic-"+t.id+".webp"),"Emneillustration mangler: "+t.id);
+for(const m of modes)assert.ok(fs.existsSync("assets/game-"+m+".webp"),"Spilillustration mangler: "+m);
+assert.ok(index.includes('id="mette-float"'),"Mette skal være klikbar nederst til højre");
+assert.ok(!index.includes("Lille Mette")&&!app.includes("Lille Mette"),"Kun navnet Mette må bruges");
 let numQ=0,numScenarios=0;
 for(const t of D.topics){
  assert.equal(t.levels.length,3,`${t.id}: tre niveauer`);
