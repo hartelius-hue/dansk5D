@@ -163,3 +163,16 @@
  .main{padding-bottom:120px}
 }
 @media(prefers-reduced-motion:reduce){.mette-float{transition:none}}
+
+/* Mobil finpudsning: ensartet progression og fuld bredde til emneoverskrifter. */
+@media(max-width:650px){
+  .section-head{display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+  .section-head .pill{align-self:flex-start}
+  .section-head h2{font-size:28px;line-height:1.16}
+  .progress-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px;padding:17px 15px}
+  .progress-strip .stat{min-width:0}
+  .progress-strip .stat strong{font-size:24px}
+  .progress-strip .stat small{font-size:11px}
+  .progress-strip .bar{grid-column:1/-1;width:100%}
+  .progress-strip .btn{grid-column:1/-1;margin-left:0!important;justify-self:stretch}
+}
