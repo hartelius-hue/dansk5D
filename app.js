@@ -3,7 +3,7 @@
 const D=window.DANSK_DATA,M=document.getElementById("main");
 if(!D||!M){document.body.insertAdjacentText("beforeend","Opgaverne kunne ikke åbnes.");return;}
 const T=D.topics,KEY="dansk5d-v1";
-const photo="https://mettefuhlendorff.github.io/Laeseblik-nyt/assets/img/mette-portraet.webp";
+const photo="assets/mette-portraet.webp";
 const modes={quiz:["🧠","Spørgsmålsværksted","Vælg og forklar svar"],platform:["🕹️","Ordhop","Spring til den rigtige platform"],maze:["🟡","Ordslugeren","Find vej til det rigtige svar"],match:["🔗","Find makker","Forbind ord og forklaringer"],memory:["🎴","Vendespil","Find begrebspar"],wordle:["🔤","Ordjagt","Gæt et ord med bogstavspor"],write:["✍️","Skriveværksted","Skriv, læs og ret"],speak:["🎤","Tal og lyt","Tal, optag og lyt"]};
 const palette=[["#609eaa","#224c65"],["#ad91ce","#604f86"],["#e5a18d","#96615a"],["#77b7a4","#2e6d61"],["#d3a966","#735c36"],["#69a8cf","#2c6586"],["#90a5ce","#435d89"],["#bc8fac","#704e71"],["#8fbcac","#26695e"],["#d2a574","#855d38"],["#859dd0","#3c5888"],["#7bb4bc","#2a6271"]];
 const E=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -33,13 +33,13 @@ if(m==="maze"){R.pos={x:2,y:4};updateMaze()}}
 function move(d){if(!R||R.mode!=="maze"||R.done)return;let v={up:[0,-1],down:[0,1],left:[-1,0],right:[1,0]}[d];if(!v)return;let x=R.pos.x+v[0],y=R.pos.y+v[1];if(x<0||y<0||x>4||y>4||walls.has(x+","+y))return;R.pos={x,y};updateMaze();let n=ends.findIndex(p=>p[0]===x&&p[1]===y);if(n>=0)answer(n)}
 function answer(n){if(!R||R.done||!["quiz","platform","maze","test"].includes(R.mode))return;let q=R.items[R.idx],o=q?.options[n];if(!o)return;
 if(R.mode==="test"){R.answers.push({id:q.topic,ok:o.ok});if(o.ok)R.score++;R.idx++;if(R.idx>=R.items.length)return finishTest();question();return}
-R.tries++;let f=document.getElementById("feedback");if(!f)return;
+if(R.tries===1&&R.lastWrong===n)return;R.tries++;let f=document.getElementById("feedback");if(!f)return;
 if(o.ok){R.score+=R.tries===1?1:.5;if(R.tries>1)R.missed.push(q);R.done=true;f.className="feedback ok";f.innerHTML=`<strong>${R.tries===1?"Godt tænkt!":"Fint, at du prøvede igen!"}</strong><p>${E(q.why)}</p>`}
-else if(R.tries===1){f.className="feedback warn";f.innerHTML=`<strong>Prøv igen.</strong><p>Et spor: ${E(q.hint)}</p>`;f.hidden=false;let b=document.querySelector(`[data-a="answer"][data-n="${n}"]`);if(b)b.disabled=true;if(R.mode==="maze"){R.pos={x:2,y:4};updateMaze()}return}
+else if(R.tries===1){R.lastWrong=n;f.className="feedback warn";f.innerHTML=`<strong>Prøv igen.</strong><p>Et spor: ${E(q.hint)}</p>`;f.hidden=false;let b=document.querySelector(`[data-a="answer"][data-n="${n}"]`);if(b)b.disabled=true;if(R.mode==="maze"){R.pos={x:2,y:4};updateMaze()}return}
 else{R.missed.push(q);R.done=true;f.className="feedback warn";f.innerHTML=`<strong>Det her skal vi øve videre på.</strong><p>${E(q.why)}</p>`}
 f.hidden=false;document.querySelectorAll('[data-a="answer"]').forEach(b=>b.disabled=true);
 document.getElementById("advance").innerHTML=`<button class="btn primary" data-a="next" style="margin-top:16px">${R.idx===R.items.length-1?"Se evalueringen":"Næste opgave"} →</button>`}
-function next(){if(!R||!R.done)return;R.idx++;R.tries=0;R.done=false;if(R.idx===R.items.length)finish();else question()}
+function next(){if(!R||!R.done)return;R.idx++;R.tries=0;R.lastWrong=null;R.done=false;if(R.idx===R.items.length)finish();else question()}
 function matchStart(){R.pairs=R.items.map((q,i)=>({id:i,left:q.prompt,right:q.options.find(x=>x.ok).text}));R.left=sh(R.pairs.map(p=>({id:p.id,text:p.left})));R.right=sh(R.pairs.map(p=>({id:p.id,text:p.right})));R.found=[];R.sel=null;R.mistakes=0;renderMatch()}
 function renderMatch(msg=""){M.innerHTML=header()+`<p class="lead">Vælg et spørgsmål til venstre og en forklaring til højre.</p><div class="match-grid"><div class="match-col">${R.left.map(p=>`<button data-a="left" data-n="${p.id}" class="${R.found.includes(p.id)?"matched":R.sel===p.id?"selected":""}" ${R.found.includes(p.id)?"disabled":""}>${E(p.text)}</button>`).join("")}</div><div class="match-col">${R.right.map(p=>`<button data-a="right" data-n="${p.id}" class="${R.found.includes(p.id)?"matched":""}" ${R.found.includes(p.id)?"disabled":""}>${E(p.text)}</button>`).join("")}</div></div><div class="feedback warn" ${msg?"":"hidden"}>${E(msg)}</div><p>${R.found.length} af 3 par fundet.</p></section>`}
 function matchClick(side,id){if(!R||R.mode!=="match")return;if(side==="left"){R.sel=id;renderMatch();return}if(R.sel===null){alert("Vælg først et spørgsmål.");return}
