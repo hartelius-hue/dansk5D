@@ -5,14 +5,21 @@ const dataSource=fs.readFileSync("data.js","utf8"),app=fs.readFileSync("app.js",
 const ctx={window:{}};vm.runInNewContext(dataSource,ctx);const D=ctx.window.DANSK_DATA;
 assert.ok(D,"Opgavedata indlæses");
 assert.equal(D.topics.length,12,"12 danskfaglige emner");
-assert.ok(fs.existsSync("assets/mette-still.webp"),"Mette-avatar skal være lokalt tilgængelig");
-assert.ok(fs.existsSync("assets/mette-animeret.gif"),"Mette-animation skal være lokalt tilgængelig");
-assert.equal(fs.readFileSync("assets/mette-animeret.gif").subarray(0,6).toString("ascii"),"GIF89a","Mette-animation skal være en rigtig GIF");
+assert.ok(fs.existsSync("assets/mette-portraet.webp"),"Mettes originale portrætfoto skal være lokalt tilgængeligt");
+assert.ok(fs.statSync("assets/mette-portraet.webp").size>10000,"Originalportrættet skal have rigtige billeddata");
+assert.ok(index.includes('class="mette-float-photo" src="assets/mette-portraet.webp"'),"Mette nederst til højre skal vise originalportrættet");
+assert.ok(app.includes('const photo="assets/mette-portraet.webp";'),"Mette-hjælperens billeder skal vise originalportrættet");
+assert.ok(!index.includes("mette-animeret.gif")&&!app.includes("mette-animeret.gif"),"Animeret Mette-avatar må ikke længere vises");
 assert.ok(fs.existsSync("assets/hero-5d.webp"),"3D-forsidebanner skal være lokalt tilgængeligt");
 const modes=new Set(["quiz","platform","maze","match","memory","wordle","write","speak"]);
 for(const t of D.topics)assert.ok(fs.existsSync("assets/topic-"+t.id+".webp"),"Emneillustration mangler: "+t.id);
 for(const m of modes)assert.ok(fs.existsSync("assets/game-"+m+".webp"),"Spilillustration mangler: "+m);
 assert.ok(index.includes('id="mette-float"'),"Mette skal være klikbar nederst til højre");
+assert.ok(index.includes('alt="Portræt af Mette, din danskhjælper"'),"Mette skal have en beskrivende billedtekst");
+assert.ok(index.includes('<strong id="adult-title">Til voksne</strong>'),"Voksenpanel og navigation skal have samme navn");
+assert.ok(index.includes('>Nulstil fremskridt</button>')&&index.includes('Brug »Nulstil fremskridt«'),"Nulstiltekst og knap skal stemme overens");
+assert.ok(index.includes('</span>\n<span>Originale opgaver'),"Footerens tekster skal være adskilt af mellemrum eller linjeskift");
+assert.ok(index.includes("med Mette som danskhjælper og badges."),"Metabeskrivelsen skal være flydende");
 assert.ok(!index.includes("Lille Mette")&&!app.includes("Lille Mette"),"Kun navnet Mette må bruges");
 let numQ=0,numScenarios=0;
 for(const t of D.topics){
