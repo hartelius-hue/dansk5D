@@ -6,3 +6,160 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
 .helper-photo{object-fit:contain;object-position:center;background:linear-gradient(145deg,#efe6ff,#d4f1eb)}
+
+
+/* 2026-11: Dansk5D – 3D-redesign med særskilte illustrationer pr. emne og spil. */
+.hero{
+  display:block; min-height:465px;
+  background:
+    linear-gradient(90deg,rgba(8,28,49,.96) 0%,rgba(9,34,54,.88) 36%,rgba(10,41,57,.15) 70%),
+    url("assets/hero-5d.webp") center center / cover no-repeat;
+  box-shadow:0 8px 0 #c4d9df,0 23px 56px rgba(10,44,65,.2);
+  border:2px solid rgba(233,248,250,.5);
+}
+.hero:before{display:none}
+.hero-copy{width:min(55%,620px);min-height:465px;padding:42px 35px 42px 52px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.hero-copy h1{font-size:clamp(40px,4.6vw,64px);margin:14px 0 18px;line-height:1.03}
+.hero-copy p{font-size:17px;max-width:505px}
+.hero-sculpture{display:none!important}
+.subject{border:2px solid rgba(237,244,247,.9);box-shadow:0 6px 0 #d9e5e9,0 18px 27px rgba(21,58,77,.13)}
+.subject-art{
+ height:193px;display:block;position:relative;overflow:hidden;
+ background-image:linear-gradient(0deg,rgba(8,28,43,.25),transparent 55%),var(--topic-art);
+ background-size:cover;background-position:center;background-repeat:no-repeat;
+}
+.subject-art:before,.subject-art:after{display:none}
+.object3d{
+ width:49px;height:49px;position:absolute;left:17px;bottom:14px;z-index:2;
+ display:grid;place-items:center;border-radius:16px;font-size:27px;
+ border:2px solid rgba(255,255,255,.93);
+ background:linear-gradient(150deg,rgba(255,250,230,.98),rgba(220,238,247,.98));
+ box-shadow:0 5px 0 rgba(8,39,59,.45),0 12px 23px rgba(4,29,42,.3);
+ transform:rotate(-9deg);
+ text-shadow:none;
+}
+.subject:hover .object3d{transform:rotate(1deg) translateY(-3px)}
+.subject-body{padding:18px 20px 20px}
+.subject-title{font-size:21px}
+.subject-desc{font-size:13px}
+.subject-foot{padding-top:16px}
+.topic-feature{
+ position:relative;height:270px;border-radius:21px;overflow:hidden;margin-bottom:23px;
+ background-image:linear-gradient(0deg,rgba(4,23,42,.69),transparent 60%),var(--topic-art);
+ background-size:cover;background-position:center 42%;background-repeat:no-repeat;
+ border:2px solid #e4f0f0;box-shadow:0 7px 0 #dfe8ec;
+}
+.topic-feature span{
+ position:absolute;bottom:17px;left:22px;right:22px;color:white;
+ font-size:21px;font-weight:900;letter-spacing:-.025em;
+ text-shadow:0 3px 14px rgba(2,13,25,.8);
+}
+.game-picker{grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.game-tile{
+ display:flex;flex-direction:column;align-items:stretch;min-height:253px;
+ border:2px solid #dfecee;overflow:hidden;text-align:left;
+ padding:0;background:white;border-radius:20px;
+ box-shadow:0 6px 0 #dae7e9,0 17px 30px rgba(20,63,78,.12);
+}
+.game-tile:hover{transform:translateY(-3px);background:white;box-shadow:0 9px 0 #d5e5e9,0 23px 36px #153e521f}
+.game-illustration{
+ position:relative;display:block;min-height:164px;width:100%;
+ background-image:var(--game-art);
+ background-position:center;background-size:cover;
+}
+.game-illustration:after{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(0deg,rgba(9,30,44,.33),transparent 50%);
+}
+.game-icon{
+ position:absolute;bottom:11px;left:12px;z-index:2;display:grid;place-items:center;
+ width:41px;height:41px;font-size:23px;border-radius:12px;
+ background:rgba(255,250,230,.95);border:2px solid white;
+ box-shadow:0 4px 0 rgba(6,32,51,.25);
+}
+.game-copy{display:flex;flex-direction:column;gap:5px;padding:15px 17px 17px;flex:1}
+.game-copy strong{margin:0;font-size:19px;line-height:1.2}
+.game-copy small{display:block;font-size:13px;line-height:1.4;color:#536b7c}
+.mode-hero{
+ height:270px;margin:-6px -6px 24px;border-radius:20px;
+ background-image:linear-gradient(90deg,rgba(17,42,61,.10),rgba(17,42,61,.06)),var(--game-art);
+ background-position:center;background-size:cover;
+ box-shadow:0 7px 0 #dce9ed;border:2px solid #edf3f6;
+}
+.playing-banner{
+ height:126px;margin:-6px -6px 20px;border-radius:17px;
+ background-image:linear-gradient(90deg,rgba(13,37,56,.08),rgba(13,37,56,.10)),var(--game-art);
+ background-position:center 36%;background-size:cover;border:2px solid #e7eff0;
+}
+.intro-guidance{
+ display:flex;align-items:center;gap:14px;background:linear-gradient(105deg,#f6efff,#f0fbf6);
+ border:1px solid #e2d9f4;border-radius:19px;margin:22px 0;padding:15px 20px;
+ box-shadow:0 5px 0 #e8e4f0;
+}
+.intro-guidance>span{font-size:31px}
+.intro-guidance strong{font-size:16px}
+.intro-guidance p{margin:3px 0 0;font-size:14px;color:#4d6076}
+.mette-float{
+ position:fixed;right:16px;bottom:15px;z-index:56;
+ display:flex;flex-direction:column;align-items:center;justify-content:end;
+ width:146px;min-height:152px;border:0;background:transparent;color:#142f48;
+ padding:0;cursor:pointer;filter:drop-shadow(0 10px 16px rgba(9,37,54,.24));
+ transition:transform .18s ease,filter .18s ease;
+}
+.mette-float:hover{transform:translateY(-5px) scale(1.025);filter:drop-shadow(0 14px 19px rgba(9,37,54,.29))}
+.mette-float picture{display:block;width:132px;height:132px}
+.mette-float img{display:block;width:132px;height:132px;object-fit:contain;object-position:center}
+.mette-float-label{
+ display:flex;align-items:center;gap:5px;justify-content:center;white-space:nowrap;
+ position:relative;margin-top:-10px;padding:8px 13px;
+ border-radius:99px;border:2px solid white;
+ background:linear-gradient(120deg,#184d68,#137b82);color:#fff;
+ box-shadow:0 4px 0 #104459;
+ font-size:12px;line-height:1.1;font-weight:850;letter-spacing:.01em;
+}
+.mette-float:focus-visible{outline:3px solid #d17b32;outline-offset:6px;border-radius:12px}
+.main{padding-bottom:112px}
+.helper-photo{border-radius:50%;background:linear-gradient(145deg,#f2e8ff,#d8eee8);object-fit:contain}
+@media(min-width:1000px){.subject:hover .subject-art{background-size:cover}}
+@media(max-width:920px){
+ .hero-copy{width:61%;padding-left:34px}
+ .game-picker{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .topic-feature{height:245px}
+}
+@media(max-width:650px){
+ .hero{
+   min-height:555px;
+   background-image:linear-gradient(180deg,rgba(7,28,47,.98) 0%,rgba(9,32,53,.91) 42%,rgba(9,36,51,.10) 83%),url("assets/hero-5d.webp");
+   background-position:center,66% 50%;background-size:cover;display:block;
+ }
+ .hero-copy{
+   width:100%;min-height:0;display:block;
+   padding:28px 22px 220px;
+ }
+ .hero-copy h1{font-size:42px}
+ .hero-copy p{font-size:15px;max-width:450px;margin-bottom:15px}
+ .hero-actions{gap:9px}.hero-actions .btn{font-size:13px;padding:10px 13px}
+ .subject-art{width:42%;min-width:140px;height:auto;min-height:160px;flex-shrink:0}
+ .object3d{width:38px;height:38px;font-size:21px;left:9px;bottom:9px;border-radius:11px}
+ .subject-body{padding:13px 14px}
+ .subject-title{font-size:17px}
+ .subject-desc{font-size:12px}
+ .subject-foot{font-size:11px;padding-top:11px}
+ .game-picker{grid-template-columns:1fr;gap:13px}
+ .game-tile{display:grid;grid-template-columns:42% 1fr;min-height:126px}
+ .game-illustration{min-height:132px;height:100%}
+ .game-copy{padding:16px 14px}
+ .game-copy strong{font-size:17px}
+ .game-copy small{font-size:12px}
+ .topic-feature{height:188px;margin-bottom:18px}
+ .topic-feature span{font-size:17px}
+ .mode-hero{height:168px}
+ .playing-banner{height:96px}
+ .mette-float{width:103px;min-height:116px;right:7px;bottom:12px}
+ .mette-float picture,.mette-float img{width:98px;height:98px}
+ .mette-float-label{font-size:10px;padding:7px 9px;margin-top:-8px}
+ .intro-guidance{margin:16px 0;padding:12px 15px}
+ .intro-guidance p{font-size:12px}
+ .main{padding-bottom:120px}
+}
+@media(prefers-reduced-motion:reduce){.mette-float{transition:none}}
