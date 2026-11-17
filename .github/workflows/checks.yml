@@ -19,3 +19,13 @@ jobs:
           node --check app.js
       - name: Kontroller opgaver, tre niveauer og lokale assets
         run: node qa/check.cjs
+      - name: Test desktop, mobil og elevnavigation i Chromium
+        run: |
+          npm install --no-save --ignore-scripts playwright-core
+          node qa/visual.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dansk5d-visuel-kontrol
+          path: qa/screenshots/*.png
+          if-no-files-found: ignore
