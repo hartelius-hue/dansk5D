@@ -241,3 +241,16 @@
  .mette-avatar-picture,.mette-float::after{animation:none!important}
  .mette-float .mette-avatar-picture .mette-float-photo{filter:drop-shadow(0 4px 4px rgba(16,62,85,.14))}
 }
+
+
+/* 5.D's julekalender – introduktion på Danskværkstedets forside */
+.advent-5d-entry{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:end;justify-content:space-between;gap:20px;min-height:280px;margin:28px 0 20px;padding:34px clamp(22px,4vw,48px);border:4px solid #dcb87e;border-radius:27px;background:#1e3b3a url('julekalender/assets/julehus.webp') center 37%/cover no-repeat;box-shadow:0 14px 30px #153c3a2b;color:#fff8e8}
+.advent-5d-entry:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#071f25ee,#123330db 46%,#09252a63 84%);pointer-events:none}
+.advent-5d-cover{max-width:700px}
+.advent-5d-kicker{font-size:12px;font-weight:900;letter-spacing:.16em;color:#ffe4a1}
+.advent-5d-entry h2{font:700 clamp(33px,5vw,52px)/1.1 Georgia,serif;color:#ffda96;margin:12px 0 9px}
+.advent-5d-entry p{font-size:17px;line-height:1.55;max-width:630px;margin:0 0 20px;color:#fff5e8}
+.advent-5d-go{display:inline-block;padding:12px 21px;border:2px solid #f7dba6;border-radius:13px;background:#f5d39a;color:#49311e;text-decoration:none;font-weight:900;box-shadow:0 5px 0 #a2713d}
+.advent-5d-go:hover{transform:translateY(-2px);background:#fff0c9}
+.advent-5d-stamp{flex:none;align-self:center;padding:15px 21px;border:1px solid #ffecad9c;border-radius:17px;background:#12342aaf;color:#ffedca;line-height:1.65;font-weight:800;text-align:center}
+@media(max-width:720px){.advent-5d-entry{display:block;min-height:0;padding:26px 23px;background-position:66% center}.advent-5d-entry:before{background:linear-gradient(90deg,#071f25e8,#102e2ccc)}.advent-5d-stamp{display:none}.advent-5d-entry p{font-size:15px}}
