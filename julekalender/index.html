@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1a3638">
+<meta name="description" content="5.D's julekalender: 24 små danske julemissioner, en fortsat fortælling om at redde Mette og julen, gåder og en hemmelig sætning.">
+<title>Julen i fare! · 5.D's julekalender</title>
+<link rel="stylesheet" href="calendar.css">
+<script defer src="content.js"></script>
+<script defer src="calendar.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#calendar-main">Gå til julekalenderen</a>
+<header class="sitebar"><div class="page-width sitebar-inner"><a class="sitebrand" href="../">❮ <span>Danskværkstedet <strong>5.D</strong></span></a><span class="sitebar-note">24 dage · 24 danskmissioner · én julehemmelighed</span><button type="button" id="music-switch" class="music-switch" aria-pressed="false">♫ Tænd julemusikken</button></div></header>
+<main class="page-width" id="calendar-main">
+ <section class="masthead" aria-labelledby="advent-title">
+  <div><span class="eyebrow">En julefortælling, hvor DU er med</span><h1 id="advent-title">5.D's <em>julekalender</em></h1><p>Julen er i fare. Mette er fanget i en bog. Kan 5.D redde dem begge?</p></div>
+  <div id="countdown" class="countdown" aria-live="off">
+   <span id="countdown-caption">Første låge åbner 1. december kl. 07.00</span>
+   <div class="countdown-values" aria-label="Nedtælling til første låge">
+    <div><strong id="days">–</strong><small>dage</small></div><div><strong id="hours">–</strong><small>timer</small></div><div><strong id="minutes">–</strong><small>min.</small></div><div><strong id="seconds">–</strong><small>sek.</small></div>
+   </div>
+  </div>
+ </section>
+ <section aria-label="Julehus med 24 låger" class="advent-box">
+  <div class="scene" id="calendar-scene"><div class="scene-shine" aria-hidden="true"></div><div class="door-grid" id="doors"></div><div class="snow-overlay" id="snow" aria-hidden="true"></div></div>
+  <div class="under-scene"><span>🎄 Et nyt kapitel, en kort danskopgave og en gåde hver dag</span><span>🔔 Hver låge åbner kl. 07.00 dansk tid</span></div>
+ </section>
+ <div class="lower-grid">
+  <section class="mission parchment"><span class="eyebrow">Julemissionen</span><h2>En bog er blevet farlig …</h2><p>Mette er forsvundet ind i en gammel julebog, og ordene, der holder julens magi i live, bliver slettet. Heldigvis står 5.D sammen. Hver dag skal I læse lidt videre, løse en udfordring i dansk og samle ét bogstav.</p><p><strong>Alle 22 børn får en rolle.</strong> Kapitlerne bygger på hinanden, og hver mission kan klares på cirka fem minutter.</p><div class="mission-actions"><button class="button secondary" id="how-button" type="button">📚 Sådan gør du</button><button class="button secondary" id="read-aloud-button" type="button">🔊 Hør introduktionen</button></div></section>
+  <section class="secret-panel" aria-labelledby="secret-title"><span class="eyebrow">Den hemmelige besked</span><h2 id="secret-title">Hvilke ord redder julen?</h2><p>Løs dagens gåde efter danskmissionen. Hvert rigtigt svar giver ét bogstav. Saml dem og gæt sætningen den 24. december.</p><div class="letters" id="letters" aria-label="De bogstaver, I har fundet"></div><form id="guess-form" autocomplete="off"><label for="guess">Skriv den hemmelige sætning her</label><div class="guess-row"><input id="guess" type="text" placeholder="Gæt sætningen …" maxlength="80" autocomplete="off" spellcheck="false"><button class="button gold" type="submit">Gæt</button></div></form><p class="guess-feedback" id="guess-feedback" role="status"></p><p class="hint-privacy">Fremskridt gemmes kun på denne enhed. På delte Chromebooks deles de mellem eleverne.</p></section>
+ </div>
+ <div class="progress-foot" id="progress-foot" role="status" aria-live="polite">❄️ Kalenderen gør sig klar til jul.</div>
+</main>
+<dialog id="door-dialog" class="door-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><span class="dialog-date" id="dialog-date"></span><button type="button" id="close-dialog" class="dialog-close" aria-label="Luk lågen">✕</button></div><div class="dialog-scroll"><div class="illustration" id="illustration"><div class="illustration-sparkle"></div><span class="illustration-icon" id="illustration-icon" aria-hidden="true">🎄</span></div><span class="dialog-kicker" id="dialog-kicker"></span><h2 id="dialog-title"></h2><div id="dialog-content"></div></div></dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+</body></html>
