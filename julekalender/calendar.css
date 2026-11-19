@@ -4,3 +4,15 @@
 @media(max-width:950px){.masthead{grid-template-columns:1fr}.countdown{max-width:none}.lower-grid{grid-template-columns:1fr}.scene{background-size:cover}.sitebar-note{display:none}}
 @media(max-width:620px){.page-width{padding:0 10px}.masthead{padding:23px 7px 16px}.masthead h1{font-size:clamp(31px,9vw,45px)}.masthead p{font-size:14px}.sitebar-inner{min-height:62px}.sitebrand{font-size:13px}.music-switch{font-size:11px;padding:7px 9px}.advent-box{border-width:3px}.scene{aspect-ratio:auto;background-size:cover;background-position:center;min-height:660px}.door-grid{position:relative;left:auto;top:auto;width:auto;height:auto;padding:148px 12px 25px;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(6,78px);gap:7px}.door{border-radius:8px;background:#68351c}.door-glow,.door.locked .door-glow{border-radius:6px}.door-num{font-size:27px}.door-lock{font-size:11px}.door-knob{width:7px}.under-scene{font-size:11px}.parchment,.secret-panel{padding:20px}.dialog-scroll{padding:0 17px 22px}.illustration{margin:0 -17px 17px;height:145px}.illustration-icon{font-size:70px}.door-dialog h2{font-size:28px}.chapter{font-size:16px;line-height:1.7}.pair-columns{gap:7px}.pair-button{font-size:13px;padding:10px 7px}.countdown-values>div{width:65px}.letter{width:18px}.word-space{width:8px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Skriveværksted – 5.D's korte decembermissioner */
+.write-answer{display:block;width:100%;min-height:165px;resize:vertical;line-height:1.6;font-size:17px;background:#fffdf7;color:#213a30;border:2px solid #a7baa6;border-radius:14px;padding:13px 16px;margin:9px 0 7px;font-family:inherit}
+.write-answer:focus-visible{outline:3px solid #b47b33;outline-offset:3px}
+.write-count{font-size:13px;color:#795b39;font-weight:800;text-align:right;margin-bottom:15px}
+.write-count.ready{color:#276d48}
+.write-review{border:1px solid #c9d9ca;background:#fffef7;border-radius:15px;padding:15px 16px 9px;margin:12px 0 14px}
+.write-review legend{font-size:15px;font-weight:900;color:#2c4f3b;padding:0 7px}
+.writing-check{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.45;color:#324a3c;margin:11px 0;cursor:pointer}
+.writing-check input{margin:3px 0 0;width:19px;height:19px;accent-color:#23784e;flex:none;cursor:pointer}
+.write-note{font-size:13px;line-height:1.5;color:#526458;margin:12px 0 18px}
+@media(max-width:620px){.write-answer{min-height:175px;font-size:16px}.write-review{padding:14px 11px}.writing-check{font-size:14px}}
