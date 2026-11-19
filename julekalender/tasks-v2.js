@@ -133,8 +133,8 @@ const TASKS_REVISION = [
   {
     skill:'Genrekendetegn',type:'match',
     question:'Tre tekster om julebyen er blandet sammen. Forbind hver tekstbid med dens genre.',
-    pairs:[['»Rør smør, sukker og mel sammen. Bag i otte minutter.«','Opskrift'],['»Kære Mette. Vi arbejder på at få dig fri.«','Brev'],['»I går forsvandt stjernen fra byens torv.«','Nyhedsartikel']],
-    hint:'En opskrift instruerer, et brev henvender sig til en modtager, og en nyhedsartikel fortæller om noget, der er sket.',
+    pairs:[['»Rør smør, sukker og mel sammen. Bag i otte minutter.«','Opskrift'],['»Kære Mette. Vi arbejder på at få dig fri.«','Brev'],['»Sneen daler, klokken taler.«','Digt']],
+    hint:'En opskrift giver trin, et brev har en modtager, og et digt bruger ofte rytme og sproglige billeder.',
     why:'Du har identificeret genrer ved at se på deres formål og typiske sproglige træk.'
   },
   {
