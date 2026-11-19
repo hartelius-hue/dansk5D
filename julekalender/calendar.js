@@ -53,9 +53,44 @@ function renderTask(t){orderChosen=[];matched=[];selectedLeft=null;sortAnswers={
  else if(t.type==='order'){const shuffled=t.parts.map((v,i)=>({i,v})).reverse();content=`<p class="pair-instruction">Tryk på kortene i den rækkefølge, du mener er rigtig. Du kan fortryde og prøve igen.</p><div id="order-chosen" class="order-chosen" aria-label="Din rækkefølge"></div><div class="order-bank" id="order-bank">${shuffled.map(({i,v})=>`<button type="button" class="tile-button" data-action="order-add" data-index="${i}">${escapeHtml(v)}</button>`).join('')}</div><div class="dialog-actions"><button class="button secondary" data-action="order-reset">Start forfra</button><button class="button gold" data-action="order-check">Tjek rækkefølgen</button></div>`;}
  else if(t.type==='match'){const right=t.pairs.map((p,i)=>({index:i,value:p[1]})).reverse();content=`<p class="pair-instruction">Vælg først et kort til venstre, og find derefter den rigtige makker til højre.</p><div class="pair-columns"><div class="pair-col" id="match-left">${t.pairs.map((pair,i)=>`<button type="button" class="pair-button" data-action="match-left" data-index="${i}">${escapeHtml(pair[0])}</button>`).join('')}</div><div class="pair-col" id="match-right">${right.map(({index,value})=>`<button type="button" class="pair-button" data-action="match-right" data-index="${index}">${escapeHtml(value)}</button>`).join('')}</div></div><p class="pair-instruction" id="matched-total">0 af ${t.pairs.length} par fundet</p>`;}
  else if(t.type==='sort')content=`<div id="sort-items">${t.items.map(([word],i)=>`<div class="sort-row"><strong>${escapeHtml(word)}</strong><div class="sort-options">${t.groups.map((g,j)=>`<button type="button" class="sort-choice" data-action="sort" data-word="${i}" data-group="${j}" aria-pressed="false">${escapeHtml(g)}</button>`).join('')}</div></div>`).join('')}</div><div class="dialog-actions"><button class="button gold" data-action="sort-check">Tjek mine svar</button></div>`;
- dialogContent.innerHTML=`<p class="pair-instruction">⏱ Cirka 2–3 minutter · ${escapeHtml(t.skill)}</p><div class="task-box"><span class="task-meta">DIN DANSKMISSION</span><p class="task-question">${escapeHtml(t.question)}</p>${content}<div class="feedback" id="task-feedback" hidden></div></div><div class="dialog-actions"><button class="button secondary" data-action="show-story">← Læs historien igen</button><button class="button secondary" data-action="hint">💡 Få et spor</button></div>`;
+
+ else if(t.type==='write'){
+  const checks=t.criteria.map((criterion,i)=>`<label class="writing-check"><input type="checkbox" class="write-check" value="${i}"><span>${escapeHtml(criterion)}</span></label>`).join('');
+  content=`<form id="write-form"><label class="task-meta" for="write-answer">Din tekst</label><textarea id="write-answer" class="write-answer" maxlength="900" rows="6" spellcheck="true" aria-describedby="write-count">${escapeHtml(t.starter||'')}</textarea><div class="write-count" id="write-count" role="status" aria-live="polite"></div><fieldset class="write-review"><legend>Læs din tekst igennem, og tjek de tre punkter</legend>${checks}</fieldset><p class="write-note">Du vurderer selv, om din tekst opfylder kravene. Kalenderen bedømmer ikke fri tekst automatisk, og din tekst sendes ikke til en server.</p><button class="button gold" type="submit">Jeg har læst og tjekket min tekst →</button></form>`;
+ }
+ dialogContent.innerHTML=`<p class="pair-instruction">⏱ ${t.type==='write'?'3–4':'2–3'} minutter · ${escapeHtml(t.skill)}</p><div class="task-box"><span class="task-meta">DIN DANSKMISSION</span><p class="task-question">${escapeHtml(t.question)}</p>${content}<div class="feedback" id="task-feedback" hidden></div></div><div class="dialog-actions"><button class="button secondary" data-action="show-story">← Læs historien igen</button><button class="button secondary" data-action="hint">💡 Få et spor</button></div>`;
+ if(t.type==='write')updateWriteCount();
 }
 function taskDone(){state.taskDone[currentDay]=true;save();renderDoors();phase='task-done';renderPhase();}
+
+function countWriteWords(value){
+ return (String(value||'').trim().split(/\s+/u).filter(part=>/\p{L}/u.test(part))).length;
+}
+function updateWriteCount(){
+ const t=DAYS[currentDay-1]?.task;
+ if(!t||t.type!=='write')return;
+ const el=$('write-count');
+ if(!el)return;
+ const count=countWriteWords($('write-answer')?.value||'');
+ el.textContent=`${count} ord skrevet · mindst ${t.minWords} ord`;
+ el.classList.toggle('ready',count>=t.minWords);
+}
+function handleWrite(){
+ const t=DAYS[currentDay-1].task;
+ const count=countWriteWords($('write-answer')?.value||'');
+ if(count<t.minWords){
+  feedback(`Skriv lidt mere, så du får mindst ${t.minWords} ord. Du har skrevet ${count}.`,true);
+  $('write-answer')?.focus();
+  return;
+ }
+ const checks=[...dialogContent.querySelectorAll('.write-check')];
+ if(!checks.length||checks.some(box=>!box.checked)){
+  feedback('Læs din tekst igen. Sæt flueben ved hvert punkt, når du har undersøgt, om du har opfyldt det.',true);
+  return;
+ }
+ taskDone();
+}
+
 function handleChoice(index){const t=DAYS[currentDay-1].task;if(index===t.answer){taskDone()}else{feedback('Prøv igen. Et spor: '+t.hint,true);dialogContent.querySelector(`[data-action="choice"][data-index="${index}"]`)?.classList.add('wrong')}}
 function handleType(){const t=DAYS[currentDay-1].task;const val=$('type-answer')?.value||'';const norm=x=>x.trim().toLocaleLowerCase('da-DK').replace(/[.!?]+$/,'').replace(/\s+/g,' ');if(t.answers.some(a=>norm(a)===norm(val)))taskDone();else feedback('Ikke helt. '+t.hint,true)}
 function handleOrder(action,index){const t=DAYS[currentDay-1].task;if(action==='order-reset'){orderChosen=[];renderTask(t);return}if(action==='order-add'){if(orderChosen.includes(index))return;orderChosen.push(index);const button=dialogContent.querySelector(`[data-action="order-add"][data-index="${index}"]`);if(button){button.disabled=true;button.style.opacity='.4'}$('order-chosen').innerHTML=orderChosen.map((v,i)=>`<button class="tile-button selected" data-action="order-remove" data-index="${i}" type="button">${escapeHtml(t.parts[v])} ✕</button>`).join('');return}if(action==='order-remove'){orderChosen.splice(index,1);const old=orderChosen.slice();renderTask(t);old.forEach(v=>handleOrder('order-add',v));return}if(action==='order-check'){if(orderChosen.length!==t.parts.length){feedback('Vælg alle delene, før du tjekker rækkefølgen.',true);return}if(orderChosen.every((x,i)=>x===i))taskDone();else feedback('Rækkefølgen er ikke helt rigtig. '+t.hint+' Tryk på kortene i den øverste række for at flytte dem tilbage.',true)}}
@@ -97,7 +132,8 @@ function setupEvents(){doors.addEventListener('click',e=>{const button=e.target.
  $('close-dialog').addEventListener('click',close);dialog.addEventListener('click',e=>{if(e.target===dialog)close()});
  dialog.addEventListener('close',()=>{currentDay=null;window.speechSynthesis?.cancel?.()});
  dialogContent.addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const a=b.dataset.action,n=Number(b.dataset.index);if(a==='close')return close();if(a==='read-story')return say(DAYS[currentDay-1].story);if(a==='read-greeting')return say('Glædelig jul til 5.D! I reddede Mette og julen.');if(a==='show-story'){phase='story';return renderPhase()}if(a==='show-task'){phase=state.taskDone[currentDay]?'task-done':'task';return renderPhase()}if(a==='show-riddle'){phase='riddle';return renderPhase()}if(a==='hint')return feedback(DAYS[currentDay-1].task.hint,true);if(a==='choice')return handleChoice(n);if(a==='order-add'||a==='order-reset'||a==='order-check'||a==='order-remove')return handleOrder(a,n);if(a==='match-left')return handleMatch('left',n);if(a==='match-right')return handleMatch('right',n);if(a==='sort')return handleSort(Number(b.dataset.word),Number(b.dataset.group));if(a==='sort-check')return checkSort();if(a==='riddle-answer')return riddleAnswer(n)});
- dialogContent.addEventListener('submit',e=>{if(e.target.id==='type-form'){e.preventDefault();handleType()}});
+ dialogContent.addEventListener('input',e=>{if(e.target.id==='write-answer')updateWriteCount()});
+ dialogContent.addEventListener('submit',e=>{if(e.target.id==='type-form'){e.preventDefault();handleType()}else if(e.target.id==='write-form'){e.preventDefault();handleWrite()}});
  $('guess-form').addEventListener('submit',e=>{e.preventDefault();guess($('guess').value)});$('how-button').addEventListener('click',showHow);$('read-aloud-button').addEventListener('click',()=>say('Mette er forsvundet ind i en gammel julebog, og ordene, der holder julens magi i live, bliver slettet. Heldigvis står femte D sammen. Hver dag skal I læse lidt videre, løse en udfordring i dansk og samle ét bogstav.'));
  $('music-switch').addEventListener('click',async()=>{const btn=$('music-switch');btn.disabled=true;btn.textContent='♫ Klargør julemusikken …';try{const on=await music.toggle();btn.setAttribute('aria-pressed',String(on));btn.textContent=on?'♫ Sluk julemusikken':'♫ Tænd julemusikken'}catch(e){btn.textContent='♫ Tænd julemusikken';showToast(e.message||'Julemusikken kunne ikke afspilles.')}finally{btn.disabled=false}});
  }
