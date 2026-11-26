@@ -21,15 +21,20 @@ jobs:
         run: node qa/check.cjs
       - name: Test juleopgaver, sæsonlukning og billeder
         run: node jul/qa.cjs
+      - name: Kontrollér 20 julemissioner, 5 julespil og dansk udløbsdato
+        run: node jul/qa.cjs
       - name: Test desktop, mobil og elevnavigation i Chromium
         run: |
           npm install --no-save --ignore-scripts playwright-core
           node qa/visual.cjs
+          node jul/visual.cjs
       - name: Test alle julemissioner og julespil i Chromium
         run: node qa/jul-visual.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: dansk5d-visuel-kontrol
-          path: qa/screenshots/*.png
+          path: |
+            qa/screenshots/*.png
+            jul/screenshots/*.png
           if-no-files-found: ignore
