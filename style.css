@@ -254,3 +254,15 @@
 .advent-5d-go:hover{transform:translateY(-2px);background:#fff0c9}
 .advent-5d-stamp{flex:none;align-self:center;padding:15px 21px;border:1px solid #ffecad9c;border-radius:17px;background:#12342aaf;color:#ffedca;line-height:1.65;font-weight:800;text-align:center}
 @media(max-width:720px){.advent-5d-entry{display:block;min-height:0;padding:26px 23px;background-position:66% center}.advent-5d-entry:before{background:linear-gradient(90deg,#071f25e8,#102e2ccc)}.advent-5d-stamp{display:none}.advent-5d-entry p{font-size:15px}}
+
+/* Sæsonmodul: Jul i dansk er adskilt fra de almindelige danskøvelser. */
+[hidden]{display:none!important}
+.nav-jul{background:#a9343d!important;color:#fff!important;border-color:#e4b26e!important;text-decoration:none;box-shadow:0 4px 0 #742e34}
+.jul-5d-entry{min-height:290px;position:relative;overflow:hidden;border:4px solid #fff4d7;border-radius:26px;margin:17px 0 28px;background-image:linear-gradient(90deg,rgba(13,36,49,.97),rgba(17,47,51,.88) 45%,rgba(17,47,51,.12) 84%),url("jul/assets/jule-hero.webp");background-position:center;background-size:cover;box-shadow:0 8px 0 #dbdfd4,0 25px 48px #132f3550;color:#fff}
+.jul-5d-entry:after{content:"❄   ✦   ❄";position:absolute;top:17px;right:22px;color:#ffe6aa;font-size:30px;opacity:.8}
+.jul-5d-entry-copy{position:relative;z-index:2;max-width:620px;padding:35px 36px}
+.jul-5d-entry-copy>span{display:block;color:#ffdc91;font-weight:900;letter-spacing:.13em;font-size:12px}
+.jul-5d-entry h2{color:#fff;font-size:clamp(29px,3.3vw,42px);line-height:1.04;letter-spacing:-.05em;margin:10px 0}
+.jul-5d-entry p{font-size:15px;line-height:1.6;color:#edf9ef;margin:0 0 14px}
+.jul-5d-entry small{display:block;font-size:11px;color:#ffeab3;margin-top:12px}
+@media(max-width:650px){.jul-5d-entry{min-height:420px;background-image:linear-gradient(180deg,rgba(13,36,49,.95) 0%,rgba(17,47,51,.92) 42%,rgba(17,47,51,.07) 95%),url("jul/assets/jule-hero.webp");background-position:center,66% center}.jul-5d-entry-copy{padding:25px 22px 220px}.jul-5d-entry h2{font-size:32px}.jul-5d-entry p{font-size:13px}.nav-jul{font-size:11px!important;padding:7px 9px!important}}
