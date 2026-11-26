@@ -160,6 +160,8 @@ async function main(){
  await page.goto(origin+"/jul/",{waitUntil:"networkidle"});
  await page.locator('[data-j="progress"]').first().click();
  assert.match(await page.locator(".j-stat-row").innerText(),/4\/4/);
+ assert.ok(await page.locator(".j-mette-hat").isVisible(),"Mettes originale GIF skal have separat nissehue");
+ assert.match(await page.locator(".j-mette-portrait img").getAttribute("src"),/mette-original-animeret\.gif$/,"Avatar skal komme fra Danskportalen");
  await page.locator('[data-j="mette"]').first().click();assert.ok(await page.locator("#j-mette-dialog").isVisible());
  await page.locator('[data-j="mette-close"]').click();
  await page.goto(origin+"/",{waitUntil:"networkidle"});
