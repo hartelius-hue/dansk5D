@@ -124,7 +124,7 @@ async function main(){
  page.on("response",r=>{if(r.status()>=400&&r.url().includes("/jul/"))missing.push(r.url()+" "+r.status())});
  await page.goto(origin+"/jul/",{waitUntil:"networkidle"});
  assert.match(await page.title(),/Julens danske mysterier/);
- assert.equal(await page.locator('button[data-j="room"]').count(),4);
+ assert.equal(await page.locator('.j-card button[data-j="room"]').count(),4);
  assert.equal(await page.locator('button[data-j="game"]').count(),5);
  assert.equal(await page.locator('button[data-j="workshop"]').count(),2);
  const data=await page.evaluate(()=>window.JUL5D_CONTENT);
