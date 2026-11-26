@@ -25,7 +25,6 @@ jobs:
         run: |
           npm install --no-save --ignore-scripts playwright-core
           node qa/visual.cjs
-          node jul/visual.cjs
       - name: Test alle julemissioner og julespil i Chromium
         run: node qa/jul-visual.cjs
       - uses: actions/upload-artifact@v4
