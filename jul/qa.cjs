@@ -82,6 +82,9 @@ assert.ok(index.includes('src="jul/season.js"')&&index.includes('id="nav-jul"'))
 assert.ok(root.includes("julEntry()")&&root.includes("julVisible()"));
 assert.ok(jul.includes('src="jul-app.js"')&&jul.includes('src="season.js"'));
 assert.ok(jul.includes("mette-original-animeret.gif"));
+assert.ok(jul.includes("j-mette-hat"),"Nissehue skal tegnes over originalportrættet");
+assert.ok(jul.includes("mette-portraet.webp"),"Originalfoto skal bruges ved reduceret bevægelse");
+assert.ok(css.includes("j-mette-portrait")&&css.includes("j-hat-bob"),"Mette skal have diskret animation og nissehue");
 assert.ok(css.includes("@media(max-width:670px)")&&css.includes("focus-visible"),"Tilgængelig mobilvisning");
 console.log(`JULEPORTAL VALID: 4 escape rooms, ${stages} missioner, ${tasks} faglige udfordringer, 5 julespil på 3 niveauer, 2 skriveværksteder, ${arts.length} bannere og dansk datolukning 29/12.`);
 })();
