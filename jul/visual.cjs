@@ -37,7 +37,8 @@ async function run(){
    await page.locator('[data-j="room"][data-id="'+id+'"]').first().click();
    assert.equal(await page.locator(".j-level").count(),5,id+" fem missioner");
    assert.equal(await page.locator(".j-level:disabled").count(),4,id+" startspærrer");
-   await page.locator('[data-j="home"]').first().click();
+   await page.locator('[data-j="room"]').last().click();
+  await page.locator('[data-j="home"]').first().click();
  }
  await page.locator('.j-card button[data-j="room"][data-id="bogen"]').click();
  await page.locator('[data-j="mission"][data-id="bogen"][data-n="0"]').first().click();
