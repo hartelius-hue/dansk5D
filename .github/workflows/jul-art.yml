@@ -1,0 +1,30 @@
+name: Generér juleillustrationer
+on:
+  push:
+    paths:
+      - qa/generate_jul_5d_art.py
+      - .github/workflows/jul-art.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  artwork:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installer Pillow
+        run: python -m pip install --disable-pip-version-check pillow==11.3.0
+      - name: Tegn 32 forskellige hyggelige julebannere
+        run: python qa/generate_jul_5d_art.py
+      - name: Gem billeder i repositoryet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add jul/assets/
+          if ! git diff --cached --quiet; then
+            git commit -m "Tilføj 32 julebannere til Dansk 5.D"
+            git push origin HEAD:main
+          fi
