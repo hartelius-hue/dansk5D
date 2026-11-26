@@ -21,8 +21,6 @@ jobs:
         run: node qa/check.cjs
       - name: Test juleopgaver, sæsonlukning og billeder
         run: node jul/qa.cjs
-      - name: Kontrollér 20 julemissioner, 5 julespil og dansk udløbsdato
-        run: node jul/qa.cjs
       - name: Test desktop, mobil og elevnavigation i Chromium
         run: |
           npm install --no-save --ignore-scripts playwright-core
