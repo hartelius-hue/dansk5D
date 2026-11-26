@@ -19,6 +19,8 @@ jobs:
           node --check app.js
       - name: Kontroller opgaver, tre niveauer og lokale assets
         run: node qa/check.cjs
+      - name: Test juleopgaver, sæsonlukning og billeder
+        run: node jul/qa.cjs
       - name: Test desktop, mobil og elevnavigation i Chromium
         run: |
           npm install --no-save --ignore-scripts playwright-core
